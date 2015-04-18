@@ -1,0 +1,8 @@
+libreboard:
+  image: miurahr/libreboard
+  environments:
+    - VIRTUAL_HOST=example.com
+    - MONGO_URL=mongodb://dbserver:27017/libreboard
+    - ROOT_URL=http://example.com
+  ports:
+    - 5555:5555
