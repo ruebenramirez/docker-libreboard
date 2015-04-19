@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -qq -y git && \
 
 ENV HOME /app
 WORKDIR /app
+
+# remove it before build
+RUN rm -rf .meteor
 RUN /meteor-build.sh
 
 # Run the generated files
