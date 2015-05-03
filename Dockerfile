@@ -20,6 +20,7 @@ RUN ln -s /home/app/.meteor/packages/meteor-tool/1.1.3/mt-os.linux.x86_64/dev_bu
 
 USER app
 WORKDIR /home/app/libreboard
+RUN git checkout newui
 RUN meteor build ../build --directory
 RUN cd /home/app/build/bundle/programs/server && npm install
 
