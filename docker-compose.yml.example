@@ -3,10 +3,11 @@ mongo:
 libreboard:
   image: miurahr/libreboard
   environments:
-    - VIRTUAL_HOST=example.com
-    - MONGO_URL=mongodb://${MONGO_PORT_27017_TCP_ADDR}:${MONGO_PORT_27017_TCP_PORT}/libreboard
+    - MONGO_URL=mongodb://mongo:27017/libreboard
     - ROOT_URL=http://example.com
   links:
     - mongo:mongo
+  volumes:
+    - /tmp/libreboard-logs:/home/app/logs
   ports:
     - 5555:5555
