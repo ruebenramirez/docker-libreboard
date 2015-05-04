@@ -2,7 +2,7 @@ mongo:
   image: mongo
 libreboard:
   image: miurahr/libreboard
-  environments:
+  environment:
     - MONGO_URL=mongodb://mongo:27017/libreboard
     - ROOT_URL=http://example.com
   links:
