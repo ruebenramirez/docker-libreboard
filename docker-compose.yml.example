@@ -8,6 +8,6 @@ libreboard:
   links:
     - mongo:mongo
   volumes:
-    - /tmp/libreboard-logs:/home/app/logs
+    - logs:/home/app/logs
   ports:
     - 5555:5555
